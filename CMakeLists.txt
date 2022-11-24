@@ -3,22 +3,22 @@ cmake_minimum_required(VERSION 3.12)
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
-project(04_print_ip_sfinae VERSION ${PROJECT_VERSION})
+project(print_ip VERSION ${PROJECT_VERSION})
 
 configure_file(version.h.in version.h)
 
-add_executable(04_print_ip_sfinae main.cpp implementation.h)
+add_executable(print_ip main.cpp implementation.h)
 
-set_target_properties(04_print_ip_sfinae PROPERTIES
+set_target_properties(print_ip PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
  
-target_include_directories(04_print_ip_sfinae
+target_include_directories(print_ip
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
 
-install(TARGETS 04_print_ip_sfinae RUNTIME DESTINATION bin)
+install(TARGETS print_ip RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
