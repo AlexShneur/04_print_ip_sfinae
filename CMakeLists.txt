@@ -13,7 +13,7 @@ set_target_properties(04_print_ip_sfinae PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
-
+ 
 target_include_directories(04_print_ip_sfinae
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
